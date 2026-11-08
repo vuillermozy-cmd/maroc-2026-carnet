@@ -1,0 +1,653 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Carnet Maroc 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap">
+<style>
+/* Layout: one narrow column for a phone held in a car — status, programme table, map, then each day's timetable. */
+:root {
+  --bg: #f8f6f2;
+  --surface: #ffffff;
+  --ink: #1d2232;
+  --muted: #646a7a;
+  --line: #e2ddd3;
+  --indigo: #2c4aa0;
+  --indigo-soft: #e6ebf8;
+  --ochre: #b8701f;
+  --ochre-soft: #f6ead9;
+  --palm: #3f7140;
+  --palm-soft: #e3efe1;
+  --warn: #a2401c;
+  --warn-soft: #f8e4da;
+  --map-bg: #f1ece2;
+  --road-case: #ffffff;
+  --relief: #9a8a70;
+  --water: #5c8fc4;
+  --on-accent: #ffffff;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Helvetica Neue", Arial, system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11141e; --surface: #1a1f2d; --ink: #ebe7df; --muted: #a2a7b6; --line: #2d3446;
+    --indigo: #93a9ff; --indigo-soft: #232c4a; --ochre: #e5a557; --ochre-soft: #3a2c1a;
+    --palm: #8cc087; --palm-soft: #1f3121; --warn: #f0906a; --warn-soft: #3d2219;
+    --map-bg: #1c2130; --road-case: #2a3044; --relief: #6d6656; --water: #6f9fd6; --on-accent: #11141e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11141e; --surface: #1a1f2d; --ink: #ebe7df; --muted: #a2a7b6; --line: #2d3446;
+  --indigo: #93a9ff; --indigo-soft: #232c4a; --ochre: #e5a557; --ochre-soft: #3a2c1a;
+  --palm: #8cc087; --palm-soft: #1f3121; --warn: #f0906a; --warn-soft: #3d2219;
+  --map-bg: #1c2130; --road-case: #2a3044; --relief: #6d6656; --water: #6f9fd6; --on-accent: #11141e;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 1rem; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; }
+p { margin: 0; }
+.eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
+.num { font-variant-numeric: tabular-nums; }
+a { color: var(--indigo); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--indigo); outline-offset: 2px; border-radius: 4px; }
+section { display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 64px; }
+.foot { font-size: 0.8rem; color: var(--muted); }
+
+nav.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+  margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
+}
+nav.top .in { max-width: 680px; margin: 0 auto; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+nav.top a {
+  flex: none; text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.9rem;
+  padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+}
+
+header.hero { display: flex; flex-direction: column; gap: 14px; padding-top: 18px; }
+.hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; }
+.hero h1 span { color: var(--ochre); }
+.status { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.status .big { font-family: var(--font-display); font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--indigo); }
+.status .sub { color: var(--muted); }
+.track { display: grid; grid-template-columns: repeat(11, 1fr); gap: 4px; }
+.track i { display: block; height: 10px; border-radius: 3px; background: var(--line); }
+.track i.past { background: var(--indigo); }
+.track i.today { background: var(--ochre); }
+.track i.south { box-shadow: inset 0 -3px 0 var(--ochre); }
+.track-legend { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; min-width: 0; }
+.stat b { display: block; font-family: var(--font-display); font-size: 1.3rem; line-height: 1.1; }
+.stat span { font-size: 0.78rem; color: var(--muted); }
+
+/* Tables */
+.tbl { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; white-space: nowrap; }
+td.d { white-space: nowrap; font-weight: 700; }
+tr.south td.d { color: var(--ochre); }
+tr.zero td.vol { color: var(--palm); font-weight: 700; }
+tr.today td { background: var(--ochre-soft); }
+tfoot td { font-weight: 700; border-top: 1px solid var(--line); }
+table.prog td small { display: block; color: var(--muted); font-size: 0.78rem; }
+
+/* Map */
+.map-card { background: var(--map-bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.map-card svg { display: block; width: 100%; height: auto; touch-action: manipulation; }
+.map-tabs { display: flex; gap: 6px; padding: 8px 10px; overflow-x: auto; border-top: 1px solid var(--line); scrollbar-width: none; }
+.map-tabs button { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 11px; cursor: pointer; font-weight: 700; font-size: 0.82rem; }
+.map-tabs button[aria-pressed="true"] { background: var(--indigo); color: var(--on-accent); border-color: var(--indigo); }
+.map-caption { padding: 0 12px 10px; font-size: 0.82rem; color: var(--muted); }
+svg .relief { fill: none; stroke: var(--relief); stroke-linecap: round; stroke-linejoin: round; opacity: 0.2; }
+svg .river { fill: none; stroke: var(--water); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.7; vector-effect: non-scaling-stroke; }
+svg .lake { fill: var(--water); opacity: 0.45; }
+svg .geo { fill: var(--muted); font-family: var(--font-body); font-style: italic; }
+svg .peak { fill: var(--relief); }
+svg .case { fill: none; stroke: var(--road-case); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+svg .road { fill: none; stroke: var(--indigo); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; cursor: pointer; }
+svg .road.dim { opacity: 0.28; }
+svg .road.on { stroke: var(--ochre); stroke-width: 6.5; }
+svg .town { fill: var(--surface); stroke: var(--ink); stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+svg .stop { fill: var(--indigo); stroke: var(--map-bg); stroke-width: 3; vector-effect: non-scaling-stroke; }
+svg .stop.on { fill: var(--ochre); }
+svg .stopnum { fill: var(--on-accent); font-family: var(--font-display); font-weight: 800; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+svg .lbl { fill: var(--ink); font-family: var(--font-body); font-weight: 700; paint-order: stroke; stroke: var(--map-bg); stroke-linejoin: round; }
+svg .lbl.minor { font-weight: 400; fill: var(--muted); }
+svg .here { fill: none; stroke: var(--ochre); stroke-width: 3; vector-effect: non-scaling-stroke; }
+
+/* Days */
+.days { display: flex; flex-direction: column; gap: 14px; }
+.day { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 70px; }
+.day.past { opacity: 0.72; }
+.day.today { border: 2px solid var(--ochre); }
+.day-head { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
+.date { width: 54px; text-align: center; border-radius: 10px; background: var(--indigo-soft); color: var(--indigo); padding: 6px 0; line-height: 1.1; }
+.date b.range { font-size: 1.05rem; padding-block: 3px; }
+.date b { display: block; font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+.date small { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+.day.south .date { background: var(--ochre-soft); color: var(--ochre); }
+.day-title { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.day-title h3 { font-size: 1.12rem; font-weight: 700; line-height: 1.2; }
+.day-title .where { color: var(--muted); font-size: 0.88rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--indigo-soft); color: var(--indigo); white-space: nowrap; }
+.chip.ok { background: var(--palm-soft); color: var(--palm); }
+.chip.todo { background: var(--ochre-soft); color: var(--ochre); }
+.chip.decide { background: var(--warn-soft); color: var(--warn); }
+.chip.now { background: var(--ochre); color: var(--on-accent); }
+.drive { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; align-items: baseline; padding: 10px 12px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); }
+.drive b { font-family: var(--font-display); font-size: 1.05rem; }
+.drive .links { display: flex; gap: 12px; font-size: 0.88rem; font-weight: 700; }
+.drive .links button { background: none; border: 0; padding: 0; color: var(--indigo); cursor: pointer; text-decoration: underline; font-weight: 700; }
+table.sched { font-size: 0.9rem; }
+table.sched td.t { width: 1%; white-space: nowrap; font-weight: 700; color: var(--indigo); padding-right: 12px; }
+table.sched tr.car td { background: var(--indigo-soft); }
+table.sched tr.car td.t::after { content: " 🚗"; }
+table.sched td { padding: 7px 8px; }
+.alert { font-size: 0.9rem; padding: 8px 10px; border-radius: 8px; background: var(--warn-soft); }
+.alert b { color: var(--warn); }
+.sleep { font-size: 0.9rem; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.sleep .k { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
+
+details.note { border-top: 1px dashed var(--line); padding-top: 8px; }
+details.note summary { cursor: pointer; font-weight: 700; color: var(--indigo); font-size: 0.9rem; }
+details.note summary span { color: var(--muted); font-weight: 400; }
+details.note textarea {
+  width: 100%; min-height: 96px; margin-top: 8px; resize: vertical;
+  font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;
+}
+details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+.decisions { display: flex; flex-direction: column; gap: 8px; }
+.decision { display: flex; gap: 10px; align-items: baseline; padding: 10px 12px; background: var(--ochre-soft); border-radius: 10px; }
+.decision b { white-space: nowrap; }
+</style>
+
+<nav class="top" aria-label="Sections">
+  <div class="in">
+    <a href="#aujourdhui">Aujourd'hui</a>
+    <a href="#programme">Programme</a>
+    <a href="#carte">Carte et jours</a>
+    <a href="#voiture">Voiture</a>
+    <a href="#decider">À décider</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="hero" id="aujourdhui">
+    <div class="eyebrow">Yann &amp; Flore · 16 → 27 décembre 2026</div>
+    <h1>Marrakech et <span>le Sud</span></h1>
+    <div class="status" id="status" aria-live="polite"></div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <section id="programme" aria-labelledby="h-prog">
+    <h2 id="h-prog">Programme</h2>
+    <p>Trois étapes dans le Sud : Aït-Ben-Haddou (1 nuit), Boumalne Dadès (2 nuits), palmeraie de Skoura (2 nuits), en voiture de location depuis Marrakech.</p>
+    <div class="tbl"><table class="prog" id="prog"></table></div>
+    <p class="foot">Temps de conduite sans les pauses, calculés sur les vraies routes. Comptez un peu plus en montagne ou derrière un camion. Il fait jour d'environ 8 h 20 à 18 h 30 : toutes les routes sont prévues de jour.</p>
+  </section>
+
+  <section id="carte" aria-labelledby="h-carte">
+    <h2 id="h-carte">Carte et heure par heure</h2>
+    <div class="map-card">
+      <svg id="map" viewBox="0 0 1000 440" role="img" aria-label="Carte du trajet entre Marrakech, Aït-Ben-Haddou, Boumalne Dadès et Skoura"></svg>
+      <div class="map-tabs" id="map-tabs" role="group" aria-label="Choisir un jour"></div>
+      <div class="map-caption" id="map-caption"></div>
+    </div>
+    <p class="foot" id="note-mode">Chargement des notes…</p>
+    <div class="days" id="days"></div>
+    <p class="foot">Routes tracées d'après OpenStreetMap. Le relief et les rivières sont dessinés à main levée.</p>
+  </section>
+
+  <section id="voiture" aria-labelledby="h-voiture">
+    <h2 id="h-voiture">Conduire dans le Sud</h2>
+    <div class="tbl"><table class="sched"><tbody>
+      <tr><td class="t">Location</td><td>Du 21 au matin au 27 à l'aéroport. Rien en voiture du 17 au 20 : la médina se fait à pied et en taxi.</td></tr>
+      <tr><td class="t">Parking</td><td>Hébergements avec parking à chaque étape, à confirmer à la réservation. En ville et aux sites, un gardien en gilet surveille la voiture contre 5 à 20 Dh.</td></tr>
+      <tr><td class="t">Essence</td><td>Faire le plein à Ouarzazate les 22 et 26 : les stations se font rares dans les gorges.</td></tr>
+      <tr><td class="t">Route</td><td>Rouler de jour uniquement. Contrôles de vitesse fréquents. Ne rien laisser en vue dans la voiture.</td></tr>
+      <tr><td class="t">Papiers</td><td>Permis, passeport et contrat de location toujours dans la voiture.</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section id="decider" aria-labelledby="h-decider">
+    <h2 id="h-decider">À décider</h2>
+    <div class="decisions">
+      <div class="decision"><b>Le Dadès</b><span>Dormir à Boumalne même, ou dans les gorges : la journée du 23 se fait alors sans voiture.</span></div>
+      <div class="decision"><b>Voiture</b><span>Agence de location : retrait le 21 au matin, rendu à l'aéroport le 27 vers 5 h 30 si l'agence l'accepte.</span></div>
+      <div class="decision"><b>Réveillon</b><span>Lodge de charme à Skoura pour les nuits du 24 et du 25 : budget à fixer.</span></div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------- Places ----------
+  const P = {
+    marrakech:  { n: "Marrakech", lat: 31.63, lon: -7.99, q: "Marrakech", lbl: [16, -10, "start"] },
+    tichka:     { n: "Tizi n'Tichka", lat: 31.291, lon: -7.381, q: "Tizi n'Tichka", lbl: [16, 4, "start"], minor: "col à 2 260 m" },
+    abh:        { n: "Aït-Ben-Haddou", lat: 31.047, lon: -7.129, q: "Aït Benhaddou", lbl: [-18, 6, "end"] },
+    ouarzazate: { n: "Ouarzazate", lat: 30.92, lon: -6.89, q: "Ouarzazate", lbl: [0, 32, "middle"] },
+    skoura:     { n: "Skoura", lat: 31.06, lon: -6.56, q: "Skoura", lbl: [0, -22, "middle"] },
+    mgouna:     { n: "Kelâat M'Gouna", lat: 31.24, lon: -6.13, q: "Kelaat M'Gouna", lbl: [-14, 26, "end"] },
+    boumalne:   { n: "Boumalne Dadès", lat: 31.369, lon: -5.988, q: "Boumalne Dades", lbl: [-20, -6, "end"] },
+    dades:      { n: "Gorges du Dadès", lat: 31.53, lon: -5.925, q: "Gorges du Dadès", lbl: [-18, 4, "end"] }
+  };
+
+  // Real road geometry (OSRM / OpenStreetMap), simplified. [lon, lat]
+  const GEO = {"d21":[[-7.99,31.63],[-7.996,31.627],[-7.992,31.624],[-7.992,31.622],[-7.985,31.62],[-7.983,31.621],[-7.981,31.62],[-7.975,31.624],[-7.969,31.622],[-7.94,31.611],[-7.919,31.599],[-7.906,31.595],[-7.894,31.588],[-7.874,31.583],[-7.863,31.578],[-7.853,31.577],[-7.845,31.575],[-7.832,31.577],[-7.821,31.577],[-7.814,31.576],[-7.807,31.578],[-7.8,31.579],[-7.795,31.582],[-7.788,31.578],[-7.77,31.574],[-7.692,31.56],[-7.683,31.555],[-7.665,31.552],[-7.655,31.544],[-7.652,31.543],[-7.648,31.543],[-7.646,31.547],[-7.638,31.548],[-7.634,31.545],[-7.629,31.543],[-7.621,31.543],[-7.618,31.546],[-7.61,31.548],[-7.597,31.549],[-7.594,31.551],[-7.587,31.552],[-7.577,31.55],[-7.572,31.546],[-7.567,31.546],[-7.563,31.548],[-7.556,31.544],[-7.528,31.543],[-7.519,31.541],[-7.509,31.536],[-7.497,31.537],[-7.492,31.534],[-7.487,31.534],[-7.485,31.53],[-7.473,31.523],[-7.472,31.511],[-7.469,31.512],[-7.464,31.504],[-7.464,31.501],[-7.462,31.497],[-7.456,31.495],[-7.453,31.493],[-7.451,31.489],[-7.451,31.484],[-7.445,31.488],[-7.438,31.49],[-7.432,31.486],[-7.432,31.483],[-7.435,31.479],[-7.433,31.474],[-7.428,31.475],[-7.42,31.475],[-7.398,31.47],[-7.407,31.461],[-7.406,31.46],[-7.406,31.458],[-7.403,31.457],[-7.401,31.455],[-7.397,31.454],[-7.397,31.452],[-7.395,31.451],[-7.394,31.449],[-7.399,31.444],[-7.407,31.438],[-7.406,31.436],[-7.408,31.436],[-7.409,31.434],[-7.411,31.432],[-7.409,31.428],[-7.411,31.426],[-7.409,31.425],[-7.408,31.422],[-7.406,31.421],[-7.406,31.418],[-7.397,31.413],[-7.392,31.416],[-7.391,31.412],[-7.393,31.408],[-7.396,31.406],[-7.395,31.401],[-7.398,31.398],[-7.398,31.396],[-7.402,31.393],[-7.404,31.393],[-7.409,31.389],[-7.409,31.387],[-7.41,31.383],[-7.408,31.379],[-7.412,31.374],[-7.412,31.373],[-7.408,31.371],[-7.405,31.371],[-7.402,31.373],[-7.398,31.37],[-7.396,31.371],[-7.394,31.369],[-7.392,31.371],[-7.388,31.369],[-7.389,31.368],[-7.392,31.367],[-7.392,31.362],[-7.39,31.361],[-7.391,31.359],[-7.392,31.354],[-7.391,31.346],[-7.393,31.343],[-7.39,31.338],[-7.388,31.337],[-7.386,31.338],[-7.384,31.337],[-7.382,31.335],[-7.382,31.334],[-7.379,31.333],[-7.379,31.33],[-7.377,31.328],[-7.378,31.328],[-7.379,31.326],[-7.381,31.328],[-7.381,31.33],[-7.384,31.331],[-7.381,31.329],[-7.382,31.328],[-7.38,31.322],[-7.379,31.321],[-7.378,31.324],[-7.376,31.324],[-7.376,31.321],[-7.377,31.323],[-7.378,31.321],[-7.376,31.319],[-7.377,31.32],[-7.378,31.318],[-7.379,31.32],[-7.379,31.316],[-7.377,31.315],[-7.375,31.316],[-7.374,31.314],[-7.37,31.312],[-7.373,31.31],[-7.374,31.307],[-7.371,31.302],[-7.371,31.299],[-7.383,31.29],[-7.382,31.288],[-7.384,31.286],[-7.381,31.286],[-7.383,31.283],[-7.379,31.281],[-7.376,31.277],[-7.381,31.271],[-7.381,31.269],[-7.384,31.268],[-7.384,31.262],[-7.389,31.261],[-7.396,31.262],[-7.396,31.26],[-7.398,31.259],[-7.401,31.26],[-7.404,31.262],[-7.404,31.263],[-7.409,31.266],[-7.412,31.27],[-7.413,31.271],[-7.413,31.264],[-7.41,31.253],[-7.411,31.247],[-7.415,31.24],[-7.415,31.234],[-7.421,31.229],[-7.422,31.23],[-7.424,31.228],[-7.426,31.229],[-7.425,31.224],[-7.431,31.219],[-7.433,31.214],[-7.439,31.208],[-7.439,31.204],[-7.441,31.201],[-7.444,31.198],[-7.448,31.196],[-7.452,31.196],[-7.455,31.194],[-7.458,31.187],[-7.458,31.184],[-7.461,31.179],[-7.466,31.173],[-7.466,31.17],[-7.464,31.165],[-7.466,31.163],[-7.464,31.16],[-7.458,31.154],[-7.451,31.153],[-7.447,31.151],[-7.442,31.151],[-7.438,31.149],[-7.434,31.149],[-7.431,31.15],[-7.425,31.145],[-7.42,31.147],[-7.416,31.146],[-7.409,31.146],[-7.396,31.141],[-7.394,31.142],[-7.389,31.14],[-7.384,31.135],[-7.379,31.134],[-7.371,31.134],[-7.369,31.133],[-7.365,31.129],[-7.353,31.126],[-7.349,31.128],[-7.342,31.129],[-7.326,31.126],[-7.319,31.121],[-7.318,31.119],[-7.318,31.115],[-7.316,31.114],[-7.307,31.111],[-7.305,31.109],[-7.301,31.103],[-7.303,31.099],[-7.302,31.095],[-7.291,31.085],[-7.279,31.08],[-7.271,31.081],[-7.267,31.08],[-7.263,31.077],[-7.256,31.068],[-7.254,31.064],[-7.249,31.059],[-7.229,31.047],[-7.21,31.044],[-7.203,31.04],[-7.197,31.039],[-7.193,31.036],[-7.19,31.028],[-7.177,31.023],[-7.172,31.024],[-7.166,31.022],[-7.163,31.026],[-7.151,31.05],[-7.148,31.052],[-7.144,31.051],[-7.142,31.053],[-7.14,31.049],[-7.136,31.048],[-7.13,31.042],[-7.129,31.043],[-7.129,31.046],[-7.127,31.046],[-7.129,31.047]],"d22":[[-7.129,31.047],[-7.127,31.046],[-7.129,31.046],[-7.129,31.043],[-7.13,31.042],[-7.125,31.039],[-7.121,31.03],[-7.117,31.026],[-7.112,31.02],[-7.105,31.015],[-7.102,31.012],[-7.105,31.001],[-7.107,30.997],[-7.107,30.993],[-7.105,30.988],[-7.106,30.984],[-7.104,30.98],[-7.104,30.975],[-7.094,30.976],[-7.092,30.971],[-7.085,30.968],[-7.079,30.968],[-7.075,30.969],[-7.074,30.972],[-7.072,30.971],[-7.065,30.976],[-7.061,30.971],[-7.058,30.971],[-7.046,30.961],[-7.043,30.954],[-7.035,30.948],[-7.011,30.947],[-7.004,30.944],[-6.991,30.943],[-6.989,30.941],[-6.964,30.938],[-6.955,30.933],[-6.92,30.92],[-6.912,30.92],[-6.902,30.919],[-6.901,30.92],[-6.898,30.921],[-6.896,30.923],[-6.892,30.925],[-6.891,30.921],[-6.889,30.92],[-6.89,30.925],[-6.892,30.925],[-6.89,30.927],[-6.889,30.936],[-6.872,30.952],[-6.86,30.958],[-6.848,30.963],[-6.838,30.97],[-6.797,30.98],[-6.789,30.976],[-6.78,30.979],[-6.774,30.977],[-6.727,30.974],[-6.694,30.987],[-6.677,30.991],[-6.628,31.008],[-6.618,31.007],[-6.61,31.015],[-6.599,31.013],[-6.582,31.025],[-6.581,31.036],[-6.577,31.041],[-6.574,31.046],[-6.563,31.055],[-6.547,31.065],[-6.528,31.07],[-6.519,31.07],[-6.471,31.086],[-6.463,31.091],[-6.432,31.103],[-6.429,31.107],[-6.417,31.108],[-6.415,31.113],[-6.408,31.113],[-6.399,31.111],[-6.39,31.111],[-6.38,31.108],[-6.377,31.108],[-6.372,31.115],[-6.35,31.135],[-6.348,31.135],[-6.342,31.133],[-6.335,31.132],[-6.316,31.139],[-6.308,31.146],[-6.246,31.181],[-6.236,31.184],[-6.224,31.19],[-6.216,31.191],[-6.197,31.198],[-6.195,31.198],[-6.186,31.194],[-6.183,31.195],[-6.176,31.199],[-6.17,31.195],[-6.159,31.199],[-6.149,31.209],[-6.149,31.216],[-6.144,31.224],[-6.138,31.23],[-6.137,31.234],[-6.128,31.238],[-6.128,31.24],[-6.13,31.24],[-6.128,31.238],[-6.102,31.247],[-6.092,31.246],[-6.088,31.248],[-6.085,31.251],[-6.082,31.252],[-6.071,31.259],[-6.071,31.263],[-6.064,31.27],[-6.058,31.281],[-6.048,31.291],[-6.042,31.296],[-6.037,31.302],[-6.033,31.305],[-6.026,31.311],[-6.016,31.321],[-6.012,31.328],[-6.002,31.356],[-5.993,31.374],[-5.989,31.375],[-5.987,31.373],[-5.988,31.369]],"d23":[[-5.988,31.369],[-5.987,31.373],[-5.989,31.375],[-5.992,31.375],[-5.993,31.379],[-5.992,31.383],[-5.99,31.387],[-5.993,31.391],[-5.99,31.4],[-5.992,31.407],[-5.99,31.412],[-5.995,31.414],[-5.996,31.415],[-6.0,31.412],[-6.003,31.412],[-6.002,31.413],[-6.006,31.419],[-6.011,31.422],[-6.011,31.424],[-6.015,31.427],[-6.014,31.432],[-6.011,31.435],[-6.011,31.437],[-6.015,31.438],[-6.013,31.442],[-6.014,31.444],[-6.013,31.444],[-6.011,31.441],[-6.007,31.438],[-6.005,31.438],[-6.003,31.437],[-5.996,31.437],[-5.991,31.439],[-5.992,31.44],[-5.988,31.442],[-5.987,31.444],[-5.982,31.446],[-5.979,31.449],[-5.974,31.448],[-5.97,31.449],[-5.969,31.452],[-5.972,31.454],[-5.976,31.458],[-5.967,31.468],[-5.965,31.476],[-5.962,31.478],[-5.956,31.487],[-5.952,31.49],[-5.951,31.495],[-5.948,31.497],[-5.946,31.5],[-5.946,31.504],[-5.935,31.513],[-5.928,31.523],[-5.925,31.529],[-5.925,31.527],[-5.925,31.53],[-5.924,31.531],[-5.925,31.531]],"d24":[[-5.988,31.369],[-5.987,31.373],[-5.989,31.375],[-5.993,31.375],[-6.002,31.356],[-6.012,31.328],[-6.016,31.321],[-6.026,31.311],[-6.033,31.305],[-6.037,31.302],[-6.042,31.296],[-6.048,31.291],[-6.058,31.281],[-6.064,31.27],[-6.071,31.263],[-6.071,31.259],[-6.082,31.252],[-6.085,31.251],[-6.088,31.248],[-6.092,31.246],[-6.102,31.247],[-6.128,31.238],[-6.128,31.24],[-6.13,31.24],[-6.129,31.238],[-6.137,31.234],[-6.138,31.23],[-6.144,31.224],[-6.149,31.216],[-6.149,31.209],[-6.159,31.199],[-6.17,31.195],[-6.176,31.199],[-6.183,31.195],[-6.186,31.194],[-6.195,31.198],[-6.197,31.198],[-6.216,31.191],[-6.224,31.19],[-6.246,31.181],[-6.308,31.146],[-6.316,31.139],[-6.335,31.132],[-6.342,31.133],[-6.348,31.135],[-6.35,31.135],[-6.372,31.115],[-6.377,31.108],[-6.38,31.108],[-6.39,31.111],[-6.399,31.111],[-6.408,31.113],[-6.415,31.113],[-6.417,31.108],[-6.429,31.107],[-6.432,31.103],[-6.463,31.091],[-6.471,31.086],[-6.519,31.07],[-6.528,31.07],[-6.546,31.066],[-6.558,31.058],[-6.56,31.06]],"d26":[[-6.56,31.06],[-6.558,31.059],[-6.559,31.058],[-6.574,31.046],[-6.577,31.041],[-6.581,31.037],[-6.582,31.025],[-6.599,31.013],[-6.61,31.015],[-6.618,31.007],[-6.628,31.008],[-6.677,30.991],[-6.694,30.987],[-6.727,30.974],[-6.774,30.977],[-6.78,30.979],[-6.789,30.976],[-6.797,30.98],[-6.838,30.97],[-6.848,30.963],[-6.86,30.958],[-6.872,30.952],[-6.889,30.936],[-6.89,30.927],[-6.892,30.925],[-6.891,30.921],[-6.889,30.92],[-6.89,30.925],[-6.892,30.924],[-6.899,30.928],[-6.902,30.928],[-6.914,30.932],[-6.934,30.925],[-6.955,30.933],[-6.964,30.938],[-6.989,30.941],[-6.991,30.943],[-7.004,30.944],[-7.011,30.947],[-7.035,30.948],[-7.043,30.954],[-7.046,30.961],[-7.058,30.971],[-7.061,30.971],[-7.065,30.976],[-7.072,30.971],[-7.074,30.972],[-7.075,30.969],[-7.079,30.968],[-7.085,30.968],[-7.092,30.971],[-7.094,30.976],[-7.111,30.975],[-7.137,30.989],[-7.153,31.001],[-7.157,31.016],[-7.162,31.021],[-7.172,31.024],[-7.176,31.022],[-7.19,31.028],[-7.192,31.031],[-7.194,31.037],[-7.205,31.041],[-7.208,31.043],[-7.23,31.048],[-7.249,31.059],[-7.254,31.063],[-7.262,31.076],[-7.267,31.08],[-7.271,31.081],[-7.279,31.08],[-7.291,31.085],[-7.302,31.095],[-7.303,31.099],[-7.301,31.103],[-7.305,31.109],[-7.307,31.111],[-7.316,31.114],[-7.318,31.115],[-7.318,31.119],[-7.319,31.121],[-7.326,31.126],[-7.342,31.129],[-7.349,31.128],[-7.353,31.126],[-7.365,31.129],[-7.369,31.133],[-7.371,31.134],[-7.379,31.134],[-7.384,31.135],[-7.389,31.14],[-7.394,31.142],[-7.396,31.141],[-7.409,31.146],[-7.416,31.146],[-7.42,31.147],[-7.425,31.145],[-7.431,31.15],[-7.434,31.149],[-7.438,31.149],[-7.442,31.151],[-7.447,31.151],[-7.451,31.153],[-7.458,31.154],[-7.464,31.16],[-7.466,31.163],[-7.464,31.165],[-7.466,31.17],[-7.466,31.173],[-7.461,31.179],[-7.458,31.184],[-7.458,31.187],[-7.455,31.194],[-7.452,31.196],[-7.448,31.196],[-7.444,31.198],[-7.441,31.201],[-7.439,31.204],[-7.439,31.208],[-7.433,31.214],[-7.431,31.219],[-7.425,31.224],[-7.426,31.229],[-7.424,31.228],[-7.422,31.23],[-7.421,31.229],[-7.415,31.234],[-7.415,31.24],[-7.411,31.247],[-7.41,31.253],[-7.413,31.264],[-7.413,31.271],[-7.412,31.27],[-7.409,31.266],[-7.404,31.263],[-7.404,31.262],[-7.401,31.26],[-7.398,31.259],[-7.396,31.262],[-7.389,31.261],[-7.384,31.262],[-7.384,31.268],[-7.381,31.269],[-7.381,31.271],[-7.376,31.276],[-7.379,31.281],[-7.383,31.283],[-7.381,31.286],[-7.384,31.286],[-7.382,31.288],[-7.383,31.29],[-7.371,31.299],[-7.371,31.302],[-7.374,31.307],[-7.373,31.31],[-7.37,31.312],[-7.374,31.313],[-7.375,31.316],[-7.377,31.315],[-7.379,31.316],[-7.379,31.32],[-7.378,31.318],[-7.377,31.32],[-7.376,31.319],[-7.378,31.321],[-7.377,31.323],[-7.376,31.321],[-7.376,31.324],[-7.378,31.324],[-7.379,31.321],[-7.38,31.322],[-7.382,31.328],[-7.381,31.329],[-7.384,31.331],[-7.381,31.33],[-7.381,31.328],[-7.379,31.326],[-7.378,31.328],[-7.377,31.328],[-7.379,31.33],[-7.379,31.333],[-7.382,31.334],[-7.382,31.335],[-7.384,31.337],[-7.386,31.338],[-7.388,31.337],[-7.39,31.338],[-7.393,31.343],[-7.391,31.346],[-7.392,31.354],[-7.391,31.359],[-7.39,31.361],[-7.392,31.362],[-7.392,31.367],[-7.389,31.368],[-7.388,31.369],[-7.391,31.371],[-7.394,31.369],[-7.396,31.371],[-7.398,31.37],[-7.402,31.373],[-7.405,31.371],[-7.408,31.371],[-7.412,31.373],[-7.412,31.375],[-7.408,31.379],[-7.41,31.383],[-7.409,31.387],[-7.409,31.389],[-7.404,31.393],[-7.402,31.393],[-7.398,31.396],[-7.398,31.398],[-7.395,31.401],[-7.396,31.406],[-7.393,31.408],[-7.391,31.412],[-7.392,31.416],[-7.397,31.413],[-7.406,31.418],[-7.406,31.421],[-7.408,31.422],[-7.409,31.425],[-7.411,31.426],[-7.409,31.428],[-7.411,31.432],[-7.409,31.434],[-7.408,31.436],[-7.406,31.436],[-7.407,31.438],[-7.399,31.444],[-7.394,31.449],[-7.395,31.451],[-7.397,31.452],[-7.397,31.454],[-7.401,31.455],[-7.403,31.457],[-7.406,31.458],[-7.406,31.46],[-7.407,31.461],[-7.399,31.471],[-7.424,31.475],[-7.433,31.474],[-7.435,31.479],[-7.432,31.483],[-7.432,31.486],[-7.438,31.49],[-7.445,31.488],[-7.451,31.484],[-7.451,31.489],[-7.453,31.493],[-7.456,31.495],[-7.462,31.497],[-7.464,31.501],[-7.464,31.504],[-7.469,31.512],[-7.472,31.511],[-7.474,31.524],[-7.484,31.53],[-7.488,31.534],[-7.492,31.534],[-7.497,31.537],[-7.509,31.536],[-7.52,31.541],[-7.535,31.543],[-7.553,31.544],[-7.563,31.548],[-7.567,31.546],[-7.572,31.546],[-7.577,31.55],[-7.587,31.552],[-7.594,31.551],[-7.597,31.549],[-7.61,31.548],[-7.618,31.546],[-7.621,31.543],[-7.629,31.543],[-7.634,31.546],[-7.638,31.549],[-7.646,31.547],[-7.648,31.543],[-7.652,31.543],[-7.655,31.544],[-7.665,31.552],[-7.683,31.555],[-7.692,31.56],[-7.765,31.573],[-7.788,31.578],[-7.794,31.582],[-7.801,31.579],[-7.806,31.579],[-7.814,31.576],[-7.821,31.578],[-7.832,31.577],[-7.845,31.575],[-7.852,31.577],[-7.864,31.578],[-7.874,31.583],[-7.894,31.589],[-7.899,31.592],[-7.914,31.598],[-7.919,31.599],[-7.94,31.611],[-7.969,31.622],[-7.971,31.623],[-7.972,31.619],[-7.975,31.615],[-7.989,31.611],[-7.993,31.613],[-7.991,31.617],[-7.992,31.622],[-7.99,31.623],[-7.993,31.627],[-7.99,31.63]]};
+
+  // ---------- Days ----------
+  const CAR = "Voiture de location";
+  const DAYS = [
+    { date: "2026-12-16", dateEnd: "2026-12-20", title: "Vol, puis Marrakech et les 30 ans de Yasmine", where: "Montréal → Marrakech", stay: "marrakech",
+      park: "Pas de voiture avant le 21 : la médina se fait à pied et en taxi.",
+      sleep: ["Logement géré avec le groupe (nuit du 16 dans l'avion)", "ok", "Géré"],
+      sched: [
+        ["mer. 16 · 18:25", "Décollage de Montréal, vol Air Transat TS 396", "car"],
+        ["jeu. 17 · 06:20", "Atterrissage à Marrakech, passeports, bagages"],
+        ["jeu. 17 · 07:30", "Taxi vers le logement (≈ 20 min)", "car"],
+        ["jeu. 17 · matin", "Petit-déjeuner et sieste"],
+        ["17 → 20", "Les 30 ans de Yasmine : programme géré avec le groupe"],
+        ["dim. 20 · soir", "Préparer un petit sac pour le Sud : couches chaudes, bonnet, chaussures de marche"]],
+      alerts: ["Prévenir le logement de l'arrivée à 06 h 20 pour entrer tôt.", "<b>Liquide :</b> retirer des dirhams avant le 21. Il n'y a pas de banque dans les gorges du Dadès et le réseau y est faible."] },
+
+    { date: "2026-12-21", park: "Retrait à l'agence (Guéliz ou aéroport) : la voiture n'entre pas dans la médina. À Aït-Ben-Haddou, choisir un hébergement côté nouveau village, avec parking. Le ksar se rejoint à pied par la passerelle.", south: true, geo: "d21", title: "Le col du Tichka et Aït-Ben-Haddou", where: "Aït-Ben-Haddou", stay: "abh",
+      drive: { from: "Marrakech", to: "Aït-Ben-Haddou", km: 171, min: 210, route: ["marrakech", "tichka", "abh"] },
+      high: "Col du Tichka, ksar au coucher du soleil",
+      sleep: ["Riad ou kasbah avec vue sur le ksar", "todo", "À réserver"],
+      sched: [
+        ["08:30", "Retrait de la voiture de location à Marrakech"],
+        ["09:00", "Départ par la N9 vers le Haut Atlas", "car"],
+        ["10:30", "Pause café à Taddert"],
+        ["11:15", "Col du Tizi n'Tichka (2 260 m) : photos et thé", "car"],
+        ["13:00", "Arrivée à Aït-Ben-Haddou, déjeuner, installation"],
+        ["15:30", "Visite du ksar, entrée gratuite, montée à l'igherm pour la vue"],
+        ["18:00", "Coucher du soleil sur le ksar (≈ 18 h 30)"],
+        ["19:30", "Dîner au riad"]],
+      alerts: ["<b>Neige :</b> le col peut fermer en décembre. Partir le matin, ne jamais rouler de nuit.", "<b>Ksar :</b> refuser les faux billets et entrer par la passerelle. Télouet est fermé depuis le séisme de 2023."] },
+
+    { date: "2026-12-22", park: "Kasbah de Taourirt : stationnement dans la rue avec un gardien (5 à 10 Dh). Faire le plein à Ouarzazate. Au Dadès, les auberges ont leur propre parking.", south: true, geo: "d22", title: "Ouarzazate, puis Boumalne Dadès", where: "Boumalne Dadès", stay: "boumalne",
+      drive: { from: "Aït-Ben-Haddou", to: "Boumalne Dadès", km: 147, min: 180, route: ["abh", "ouarzazate", "skoura", "mgouna", "boumalne"] },
+      high: "Kasbah de Taourirt, arrivée au Dadès",
+      sleep: ["Maison d'hôtes dans la vallée du Dadès (2 nuits)", "todo", "À réserver"],
+      sched: [
+        ["08:20", "Option : lever du soleil sur le ksar depuis la terrasse"],
+        ["09:30", "Départ vers Ouarzazate (≈ 50 min)", "car"],
+        ["10:30", "Kasbah de Taourirt (20 Dh), café, retrait d'espèces"],
+        ["12:00", "Déjeuner à Ouarzazate"],
+        ["13:15", "Route vers Boumalne par Skoura et Kelâat M'Gouna (≈ 2 h 10)", "car"],
+        ["15:30", "Arrivée à Boumalne Dadès, installation"],
+        ["17:30", "Balade dans la palmeraie du Dadès, coucher du soleil vers 18 h 25"]],
+      alerts: ["<b>Liquide :</b> dernier retrait facile à Ouarzazate ou à Boumalne."] },
+
+    { date: "2026-12-23", park: "Parking au café Timzzillite et au départ des sentiers, au bord de la R704. Route étroite en lacets : rouler doucement.", south: true, geo: "d23", title: "Les gorges du Dadès", where: "Boumalne Dadès", stay: "boumalne",
+      drive: { from: "Boumalne", to: "gorges du Dadès, aller-retour", km: 60, min: 80, route: ["boumalne", "dades", "boumalne"] },
+      high: "Randonnée aux Doigts de singe, lacets des gorges",
+      sleep: ["Même maison d'hôtes", "todo", "À réserver"],
+      sched: [
+        ["09:30", "Départ vers les gorges par la R704 (≈ 40 min)", "car"],
+        ["09:45", "Arrêt à Aït Youl : kasbah du Glaoui"],
+        ["10:15", "Randonnée guidée vers les Doigts de singe, 2 à 3 h"],
+        ["13:00", "Déjeuner au café Timzzillite, au-dessus des lacets"],
+        ["15:00", "Retour tranquille vers Boumalne, arrêts photo", "car"],
+        ["16:00", "Temps libre : hammam, terrasse, lecture"]],
+      alerts: ["Si vous dormez dans les gorges, cette journée se fait sans voiture."] },
+
+    { date: "2026-12-24", park: "Souk de Skoura : se garer à l'entrée avec un gardien. Les lodges de la palmeraie s'atteignent souvent par une piste en terre : demander le plan d'accès au lodge, et arriver avant la nuit (18 h 30).", south: true, geo: "d24", wow: true, title: "Vallée des Roses, puis réveillon à Skoura", where: "Palmeraie de Skoura", stay: "skoura",
+      drive: { from: "Boumalne Dadès", to: "Skoura", km: 73, min: 90, route: ["boumalne", "mgouna", "skoura"] },
+      high: "Distillerie de rose, souk du jeudi, réveillon",
+      sleep: ["Lodge de charme dans la palmeraie de Skoura (2 nuits)", "todo", "À réserver tôt"],
+      sched: [
+        ["09:30", "Départ, sans se presser", "car"],
+        ["10:00", "Kelâat M'Gouna : distillerie de rose, courte balade dans la vallée des Roses"],
+        ["11:30", "Route vers Skoura (≈ 1 h)", "car"],
+        ["12:30", "Souk du jeudi à Skoura"],
+        ["13:30", "Déjeuner"],
+        ["15:00", "Installation au lodge, piscine ou hammam"],
+        ["18:30", "Coucher du soleil sur la palmeraie"],
+        ["20:00", "Dîner du réveillon au lodge"]],
+      alerts: ["<b>Réservation :</b> Noël fait monter les prix. Vérifier le chauffage, les nuits sont froides."] },
+
+    { date: "2026-12-25", park: "La voiture reste au parking du lodge. La palmeraie et la kasbah d'Amridil se rejoignent à vélo ou à pied.", south: true, title: "Noël dans la palmeraie", where: "Palmeraie de Skoura", stay: "skoura",
+      high: "Palmeraie à vélo, kasbah d'Amridil, hammam",
+      sleep: ["Même lodge", "todo", "À réserver tôt"],
+      sched: [
+        ["09:30", "Palmeraie à vélo ou à pied avec un guide, 2 à 3 h"],
+        ["12:30", "Déjeuner au lodge"],
+        ["14:30", "Kasbah d'Amridil (40 Dh) et atelier de poterie de la famille Kabor"],
+        ["16:30", "Hammam, piscine, repos"],
+        ["18:30", "Coucher du soleil depuis la terrasse"]] },
+
+    { date: "2026-12-26", park: "Choisir un hôtel avec parking dans l'Hivernage. Faire le plein avant de rendre la voiture.", south: true, geo: "d26", title: "Retour à Marrakech par le Tichka", where: "Marrakech, Hivernage", stay: "marrakech",
+      drive: { from: "Skoura", to: "Marrakech", km: 238, min: 270, route: ["skoura", "ouarzazate", "tichka", "marrakech"] },
+      high: "Dernière traversée de l'Atlas",
+      sleep: ["Hôtel confortable dans l'Hivernage ou près de l'aéroport", "todo", "À réserver"],
+      sched: [
+        ["08:30", "Départ juste après le lever du soleil", "car"],
+        ["09:15", "Ouarzazate : plein d'essence et café"],
+        ["09:45", "Route vers le col du Tichka (≈ 2 h)", "car"],
+        ["11:45", "Pause au col"],
+        ["12:45", "Déjeuner à Taddert"],
+        ["14:00", "Route vers Marrakech (≈ 1 h 30)", "car"],
+        ["15:30", "Arrivée à l'hôtel, après-midi libre"],
+        ["Soir", "Dernier dîner, valises bouclées, plein de la voiture"]],
+      alerts: ["<b>Tichka :</b> vérifier l'état de la route avant de partir. Cette journée sert de marge avant le vol."] },
+
+    { date: "2026-12-27", park: "Vérifier que l'agence accepte un retour à 5 h 30 (dépose des clés). Sinon, rendre la voiture le 26 au soir et prendre un taxi.", title: "Retour à Montréal", where: "Marrakech → Montréal",
+      sched: [
+        ["04:45", "Réveil"],
+        ["05:15", "Départ vers l'aéroport (≈ 15 min)", "car"],
+        ["05:30", "Rendu de la voiture (à confirmer avec l'agence), enregistrement"],
+        ["07:50", "Vol Air Transat TS 397, arrivée à Montréal à 11 h 00"]] }
+  ];
+
+  // ---------- Helpers ----------
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const DOW = ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."];
+  const parse = (d) => { const [y, m, dd] = d.split("-").map(Number); return new Date(y, m - 1, dd); };
+  const dayDiff = (a, b) => Math.round((b - a) / 864e5);
+  const fmtMin = (m) => { const h = Math.floor(m / 60), r = m % 60; return h ? (r ? `${h} h ${String(r).padStart(2, "0")}` : `${h} h`) : `${r} min`; };
+  const ymd = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const todayLocal = () => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); };
+  const dateLabel = (iso) => { const d = parse(iso); return `${DOW[d.getDay()]} ${d.getDate()}`; };
+  const lastOf = (d) => d.dateEnd || d.date;
+  const covers = (d, iso) => iso >= d.date && iso <= lastOf(d);
+  const tabLabel = (d) => d.dateEnd ? `${parse(d.date).getDate()} → ${parse(d.dateEnd).getDate()}` : dateLabel(d.date);
+  const gmaps = (keys) => {
+    const pts = keys.filter((k, i) => k !== keys[i - 1]).map((k) => P[k].q + ", Maroc");
+    let u = "https://www.google.com/maps/dir/?api=1&travelmode=driving&origin=" + encodeURIComponent(pts[0]) +
+      "&destination=" + encodeURIComponent(pts[pts.length - 1]);
+    const mid = pts.slice(1, -1);
+    if (mid.length) u += "&waypoints=" + mid.map(encodeURIComponent).join("%7C");
+    return u;
+  };
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* storage unavailable */ } }
+  };
+  const drives = DAYS.filter((d) => d.drive);
+  const totalKm = drives.reduce((s, d) => s + d.drive.km, 0);
+  const totalMin = drives.reduce((s, d) => s + d.drive.min, 0);
+
+  // ---------- Status ----------
+  function renderStatus() {
+    const t = todayLocal(), today = ymd(t);
+    const dep = parse("2026-12-16"), first = parse("2026-12-17"), last = parse("2026-12-27");
+    let big, sub, idx = -1;
+    if (t < dep) { big = `J-${dayDiff(t, dep)}`; sub = "avant le départ de Montréal, le mercredi 16 décembre à 18 h 25."; }
+    else if (t > last) { big = "Terminé"; sub = "11 jours au Maroc, du 17 au 27 décembre."; }
+    else if (t < first) { big = "Jour 0"; sub = "Décollage ce soir à 18 h 25, vol TS 396."; }
+    else {
+      idx = dayDiff(first, t);
+      const d = DAYS.find((x) => covers(x, today));
+      big = `Jour ${idx + 1} / 11`;
+      sub = d ? `${esc(d.title)} · ${esc(d.where)}` : "";
+    }
+    let track = "";
+    for (let i = 0; i < 11; i++) {
+      const cls = [idx > i ? "past" : "", idx === i ? "today" : "", i >= 4 && i <= 9 ? "south" : ""].join(" ").trim();
+      track += `<i class="${cls}" title="${17 + i} déc."></i>`;
+    }
+    $("#status").innerHTML =
+      `<div><div class="big num">${big}</div><div class="sub">${sub}</div></div>
+       <div class="track" aria-hidden="true">${track}</div>
+       <div class="track-legend"><span>17 déc.</span><span>Sud : 21 → 26</span><span>27 déc.</span></div>`;
+    $("#stats").innerHTML =
+      `<div class="stat"><b class="num">5 nuits</b><span>dans le Sud, 3 étapes</span></div>
+       <div class="stat"><b class="num">${totalKm} km</b><span>en voiture</span></div>
+       <div class="stat"><b class="num">≈ ${fmtMin(totalMin)}</b><span>de conduite sur 6 jours</span></div>`;
+  }
+
+  // ---------- Programme table ----------
+  function renderProgramme() {
+    const today = ymd(todayLocal());
+    const rows = [
+      `<tr class="${today >= "2026-12-16" && today <= "2026-12-20" ? "today" : ""}"><td class="d">16 → 20</td><td>Marrakech<small>logement du groupe</small></td><td>30 ans de Yasmine</td><td class="r vol">–</td></tr>`
+    ];
+    DAYS.filter((d) => d.south).forEach((d) => {
+      const dr = d.drive;
+      rows.push(`<tr class="south${dr ? "" : " zero"}${d.date === today ? " today" : ""}">
+        <td class="d">${dateLabel(d.date)}</td>
+        <td>${esc(d.where)}<small>${esc(d.sleep[0])}</small></td>
+        <td>${esc(d.high)}${dr ? `<small>${esc(dr.from)} → ${esc(dr.to)}, ${dr.km} km</small>` : ""}</td>
+        <td class="r vol num">${dr ? "≈ " + fmtMin(dr.min) : "0"}</td></tr>`);
+    });
+    rows.push(`<tr><td class="d">dim. 27</td><td>Vol de retour<small>07 h 50 → Montréal 11 h 00</small></td><td>Voiture rendue à l'aéroport</td><td class="r vol">15 min</td></tr>`);
+    $("#prog").innerHTML = `<thead><tr><th>Jour</th><th>Nuit</th><th>Au programme</th><th class="r">Volant</th></tr></thead>
+      <tbody>${rows.join("")}</tbody>
+      <tfoot><tr><td colspan="3">Total dans le Sud, ${totalKm} km</td><td class="r num">≈ ${fmtMin(totalMin)}</td></tr></tfoot>`;
+  }
+
+  // ---------- Map ----------
+  const LON0 = -8.10, LAT0 = 31.72, KX = 416.7, KY = 487.5, W = 1000, H = 440;
+  const X = (lon) => (lon - LON0) * KX, Y = (lat) => (LAT0 - lat) * KY;
+  const path = (pairs) => "M" + pairs.map(([lo, la]) => X(lo).toFixed(1) + "," + Y(la).toFixed(1)).join("L");
+  let view = null; // selected day (date) or null for overview
+
+  function viewBoxFor(date) {
+    if (!date) return [0, 0, W, H];
+    const d = DAYS.find((x) => x.date === date);
+    let pts = d.geo ? GEO[d.geo] : [];
+    if (!pts.length) { const k = d.stay || "marrakech"; pts = [[P[k].lon, P[k].lat]]; }
+    const xs = pts.map((p) => X(p[0])), ys = pts.map((p) => Y(p[1]));
+    let x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+    let w = Math.max(x1 - x0, 160) * 1.35, h = Math.max(y1 - y0, 70) * 1.35;
+    if (w / h < W / H) w = h * W / H; else h = w * H / W;
+    const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+    return [cx - w / 2, cy - h / 2, w, h];
+  }
+
+  function renderMap() {
+    const vb = viewBoxFor(view);
+    const z = W / vb[2];
+    const fs = (n) => (n / z).toFixed(1);
+    const svg = $("#map");
+    svg.setAttribute("viewBox", vb.map((v) => v.toFixed(1)).join(" "));
+    const today = ymd(todayLocal());
+    const todayDay = DAYS.find((d) => covers(d, today));
+    const stops = ["abh", "boumalne", "skoura"];
+    let s = "";
+    // relief, water
+    s += `<path class="relief" stroke-width="150" d="${path([[-8.4, 31.0], [-7.8, 31.18], [-7.3, 31.33], [-6.8, 31.5], [-6.3, 31.66], [-5.8, 31.8], [-5.4, 31.92]])}"/>`;
+    s += `<path class="relief" stroke-width="70" d="${path([[-6.35, 30.97], [-6.0, 31.05], [-5.6, 31.12]])}"/>`;
+    s += `<text class="geo" font-size="${fs(24)}" x="${X(-6.95)}" y="${Y(31.62)}" transform="rotate(-17 ${X(-6.95)} ${Y(31.62)})">Haut Atlas</text>`;
+    s += `<text class="geo" font-size="${fs(20)}" x="${X(-6.3)}" y="${Y(30.9)}">Djebel Saghro</text>`;
+    s += `<path class="peak" d="M${X(-7.915)},${Y(31.06) - 13 / z} l${9 / z},${16 / z} l${-18 / z},0 z"/>`;
+    s += `<text class="geo" font-size="${fs(19)}" x="${X(-7.915)}" y="${Y(31.06) + 26 / z}" text-anchor="middle">Toubkal</text>`;
+    s += `<path class="river" d="${path([[-5.925, 31.53], [-5.97, 31.43], [-5.988, 31.369], [-6.13, 31.24], [-6.35, 31.13], [-6.56, 31.04], [-6.68, 30.97]])}"/>`;
+    s += `<path class="river" d="${path([[-7.15, 31.07], [-7.05, 31.0], [-6.93, 30.94], [-6.84, 30.93]])}"/>`;
+    s += `<ellipse class="lake" cx="${X(-6.75)}" cy="${Y(30.95)}" rx="34" ry="7" transform="rotate(-8 ${X(-6.75)} ${Y(30.95)})"/>`;
+    // roads
+    const geoDays = DAYS.filter((d) => d.geo);
+    geoDays.forEach((d) => { s += `<path class="case" d="${path(GEO[d.geo])}"/>`; });
+    geoDays.forEach((d) => {
+      const cls = view ? (view === d.date ? "road on" : "road dim") : "road";
+      s += `<path class="${cls}" data-date="${d.date}" d="${path(GEO[d.geo])}"><title>${esc(dateLabel(d.date) + " · " + d.title)}</title></path>`;
+    });
+    // towns and stops
+    ["marrakech", "tichka", "ouarzazate", "mgouna", "dades"].forEach((k) => {
+      s += `<circle class="town" cx="${X(P[k].lon)}" cy="${Y(P[k].lat)}" r="${(k === "marrakech" ? 9 : 6) / z}"/>`;
+    });
+    stops.forEach((k, i) => {
+      const on = view && DAYS.some((d) => d.date === view && d.stay === k);
+      s += `<circle class="stop${on ? " on" : ""}" cx="${X(P[k].lon)}" cy="${Y(P[k].lat)}" r="${15 / z}"/>`;
+      s += `<text class="stopnum" font-size="${fs(18)}" x="${X(P[k].lon)}" y="${Y(P[k].lat)}">${i + 1}</text>`;
+    });
+    if (todayDay && todayDay.stay) {
+      const p = P[todayDay.stay];
+      s += `<circle class="here" cx="${X(p.lon)}" cy="${Y(p.lat)}" r="${24 / z}"/>`;
+    }
+    // labels
+    Object.keys(P).forEach((k) => {
+      const p = P[k];
+      const [dx, dy, a] = p.lbl;
+      const x = X(p.lon) + dx / z, y = Y(p.lat) + dy / z;
+      s += `<text class="lbl" font-size="${fs(24)}" stroke-width="${(7 / z).toFixed(2)}" x="${x}" y="${y}" text-anchor="${a}">${esc(p.n)}</text>`;
+      if (p.minor) s += `<text class="lbl minor" font-size="${fs(19)}" stroke-width="${(6 / z).toFixed(2)}" x="${x}" y="${y + 22 / z}" text-anchor="${a}">${esc(p.minor)}</text>`;
+    });
+    svg.innerHTML = s;
+
+    const tabs = [["", "Tout"]].concat(DAYS.map((d) => [d.date, tabLabel(d)]));
+    $("#map-tabs").innerHTML = tabs.map(([d, l]) => `<button type="button" data-zoom="${d}" aria-pressed="${String((view || "") === d)}">${l}</button>`).join("");
+    const d = view && DAYS.find((x) => x.date === view);
+    $("#map-caption").textContent = !d
+      ? `Tout le Sud · ${totalKm} km · étapes 1 Aït-Ben-Haddou, 2 Boumalne Dadès, 3 Skoura. Choisissez un jour pour voir son programme.`
+      : d.drive ? `${dateLabel(d.date)} déc. · ${d.drive.from} → ${d.drive.to} · ${d.drive.km} km · ≈ ${fmtMin(d.drive.min)}`
+      : d.dateEnd ? `${tabLabel(d)} déc. · Marrakech · pas de voiture`
+      : `${dateLabel(d.date)} déc. · ${d.where} · pas de route ce jour-là`;
+  }
+
+  // ---------- Days ----------
+  function renderDays() {
+    const t = ymd(todayLocal());
+    const shown = DAYS.filter((d) => d.date === view);
+    $("#days").innerHTML = shown.length ? shown.map((d) => {
+      const dt = parse(d.date);
+      const cls = ["day", d.south ? "south" : "", lastOf(d) < t ? "past" : "", covers(d, t) ? "today" : ""].join(" ");
+      const chips = [];
+      if (covers(d, t)) chips.push(`<span class="chip now">Aujourd'hui</span>`);
+      if (d.wow) chips.push(`<span class="chip">Réveillon</span>`);
+      if (d.south && !d.drive) chips.push(`<span class="chip ok">Sans voiture</span>`);
+      const drive = d.drive ? `<div class="drive">
+          <div><b class="num">≈ ${fmtMin(d.drive.min)} · ${d.drive.km} km</b><div class="foot">${esc(d.drive.from)} → ${esc(d.drive.to)} · ${CAR}</div></div>
+          <div class="links"><a href="${gmaps(d.drive.route)}" target="_blank" rel="noopener">Google Maps</a></div>
+        </div>` : "";
+      const sched = d.sched ? `<div class="tbl"><table class="sched"><tbody>${d.sched.map(([h, txt, car]) =>
+        `<tr class="${car ? "car" : ""}"><td class="t num">${esc(h)}</td><td>${esc(txt)}</td></tr>`).join("")}</tbody></table></div>` : "";
+      const alerts = (d.alerts || []).map((a) => `<div class="alert">${a}</div>`).join("");
+      const park = d.park ? `<div class="sleep"><span class="k">Voiture</span><span>${esc(d.park)}</span></div>` : "";
+      const sleep = d.sleep ? `<div class="sleep"><span class="k">Nuit</span><span>${esc(d.sleep[0])}</span><span class="chip ${d.sleep[1]}">${esc(d.sleep[2])}</span></div>` : "";
+      return `<article class="${cls}" id="j${d.date.slice(-2)}">
+        <div class="day-head">
+          <div class="date">${d.dateEnd ? `<small>du</small><b class="num range">${dt.getDate()}–${parse(d.dateEnd).getDate()}</b>` : `<small>${DOW[dt.getDay()]}</small><b class="num">${dt.getDate()}</b>`}<small>déc.</small></div>
+          <div class="day-title"><h3>${esc(d.title)}</h3><span class="where">${esc(d.where)}</span>${chips.length ? `<div class="chips">${chips.join("")}</div>` : ""}</div>
+        </div>
+        ${drive}${sched}${alerts}${park}${sleep}
+        <details class="note" data-date="${d.date}">
+          <summary>Notes du jour <span class="preview"></span></summary>
+          <textarea id="note-${d.date}" aria-label="Notes du ${tabLabel(d)} décembre" placeholder="Ce qu'on a vu, mangé, aimé…"></textarea>
+          <div class="saved" aria-live="polite"></div>
+        </details>
+      </article>`;
+    }).join("") : `<p class="foot">Choisissez un jour sous la carte pour voir son programme heure par heure.</p>`;
+    fillNotes();
+  }
+
+  // ---------- Notes (shared db, else this device) ----------
+  const notes = {};
+  let db = null, mode = "loading", readOnly = false;
+  const timers = {}, writing = {}, queued = {};
+
+  function fillNotes() {
+    document.querySelectorAll("details.note").forEach((el) => {
+      const date = el.dataset.date, ta = el.querySelector("textarea");
+      if (document.activeElement !== ta) ta.value = notes[date] || "";
+      ta.disabled = mode === "loading" || readOnly;
+      const txt = (notes[date] || "").trim();
+      el.querySelector(".preview").textContent = txt ? "· " + (txt.length > 40 ? txt.slice(0, 40) + "…" : txt) : "";
+    });
+  }
+  const setMode = (text) => { $("#note-mode").textContent = text; };
+
+  async function writeNote(date) {
+    if (writing[date]) { queued[date] = true; return; }
+    writing[date] = true;
+    const el = document.querySelector(`details.note[data-date="${date}"] .saved`);
+    try {
+      if (db) await db.collection("journal").doc(date).set({ text: notes[date] || "", updatedAt: new Date().toISOString() });
+      else store.set("carnet-notes", JSON.stringify(notes));
+      if (el) el.textContent = "Enregistré";
+    } catch (e) {
+      if (e && e.code === "invalid_argument") { readOnly = true; setMode("Lecture seule : vous n'avez pas les droits pour écrire dans ce carnet."); fillNotes(); }
+      else if (e && e.code === "quota_exceeded") { if (el) el.textContent = "Le carnet est plein. Raccourcissez une note."; }
+      else if (el) el.textContent = "Pas enregistré : connexion indisponible. Réessayez plus tard.";
+    } finally {
+      writing[date] = false;
+      if (queued[date]) { queued[date] = false; writeNote(date); }
+    }
+  }
+
+  document.addEventListener("input", (ev) => {
+    const ta = ev.target;
+    if (!ta.matches || !ta.matches("details.note textarea")) return;
+    const date = ta.closest("details").dataset.date;
+    notes[date] = ta.value;
+    const el = ta.parentElement.querySelector(".saved");
+    if (el) el.textContent = "…";
+    clearTimeout(timers[date]);
+    timers[date] = setTimeout(() => writeNote(date), 1200);
+  });
+
+  async function initNotes() {
+    try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch (e) { db = null; }
+    if (!db) {
+      try { Object.assign(notes, JSON.parse(store.get("carnet-notes") || "{}")); } catch (e) { /* ignore */ }
+      mode = "local";
+      setMode("Notes enregistrées sur ce téléphone uniquement.");
+      fillNotes();
+      return;
+    }
+    const slow = setTimeout(() => setMode("Les notes ne sont pas joignables pour l'instant. Vérifiez la connexion."), 10000);
+    db.collection("journal").onSnapshot((snap) => {
+      snap.docs.forEach((doc) => { const v = doc.data(); if (v && typeof v.text === "string") notes[doc.id] = v.text; });
+      if (!snap.metadata.fromCache) clearTimeout(slow);
+      mode = "db";
+      if (!readOnly) setMode("Notes partagées : elles s'affichent sur tous les appareils qui ouvrent ce carnet.");
+      fillNotes();
+    }, () => {
+      clearTimeout(slow);
+      mode = "db"; readOnly = true;
+      setMode("Les notes ne sont plus disponibles pour cette visite.");
+      fillNotes();
+    });
+  }
+
+  // ---------- Interactions ----------
+  document.addEventListener("click", (ev) => {
+    const z = ev.target.closest("[data-zoom]");
+    if (z) {
+      view = z.dataset.zoom || null;
+      renderMap(); renderDays();
+      return;
+    }
+    const road = ev.target.closest("#map .road");
+    if (road) {
+      const date = road.getAttribute("data-date");
+      view = date; renderMap(); renderDays();
+    }
+  });
+
+  const startDay = ymd(todayLocal());
+  const startEntry = DAYS.find((d) => covers(d, startDay));
+  if (startEntry) view = startEntry.date;
+  renderStatus();
+  renderProgramme();
+  renderMap();
+  renderDays();
+  initNotes();
+
+})();
+</script>
+</body></html>
