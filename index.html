@@ -221,7 +221,7 @@ details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; 
     <h2 id="h-voiture">Conduire dans le Sud</h2>
     <div class="tbl"><table class="sched"><tbody>
       <tr><td class="t">Voiture</td><td>Dacia Duster 2 roues motrices ou équivalent. Pas besoin de 4×4 : toutes les routes du programme sont goudronnées, et un 4×4 ne passe pas un col fermé.</td></tr>
-      <tr><td class="t">Location</td><td><span class="chip ok">Réservé</span> Routes Car Rental, Dacia Duster ou équivalent, kilométrage illimité. Agence à l'hôtel Adam Park (écrit « Dam Park » sur la confirmation), zone touristique de l'Agdal (≈ 15 min de taxi depuis la médina). Retrait <b>lun. 21 à 8 h 00</b>, retour au même endroit <b>sam. 26 à 16 h 00</b>. Agence : +212 603 644 241.</td></tr>
+      <tr><td class="t">Location</td><td><span class="chip ok">Réservé</span> Routes Car Rental, Dacia Duster ou équivalent, kilométrage illimité. Agence à l'hôtel Adam Park (écrit « Dam Park » sur la confirmation), zone touristique de l'Agdal (≈ 15 min de taxi depuis la médina). Retrait <b>lun. 21 à 8 h 00</b>, retour au même endroit le <b>sam. 26</b> : 16 h 00 sur le contrat, <b>visé vers 18 h 00</b>, à faire accepter par l'agence au retrait le 21. Agence : +212 603 644 241.</td></tr>
       <tr><td class="t">Au comptoir</td><td>Environ 302 $ CA (≈ 214 $ US) à payer au retrait, en dirhams. L'assurance collision n'est <b>pas incluse</b> : vérifier ce que couvre la carte de crédit au Maroc, sinon prendre l'option sans franchise sur place. Caution bloquée sur une carte de crédit au nom du conducteur (montant à demander). Ajouter Flore comme 2ᵉ conductrice si elle conduit (supplément). Politique de carburant à demander.</td></tr>
       <tr><td class="t">Papiers</td><td>Permis valide depuis au moins un an et permis international (CAA, environ 20 $). Passeport et contrat de location toujours dans la voiture.</td></tr>
       <tr><td class="t">Au départ</td><td>Filmer la voiture sous tous les angles et vérifier la roue de secours.</td></tr>
@@ -284,7 +284,7 @@ details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; 
       sleep: ["Riad ou kasbah avec vue sur le ksar", "todo", "À réserver"],
       sched: [
         ["07:30", "Taxi de la médina vers l'Agdal, hôtel Adam Park (≈ 15 min)", "car"],
-        ["08:00", "Retrait de la voiture (Routes) : papiers, caution, assurance, vidéo du véhicule"],
+        ["08:00", "Retrait de la voiture (Routes) : papiers, caution, assurance, vidéo du véhicule. Faire noter sur le contrat le retour du 26 vers 18 h 00 (au lieu de 16 h 00)"],
         ["09:00", "Départ par la N9 vers le Haut Atlas", "car"],
         ["10:30", "Pause café à Taddert"],
         ["11:15", "Col du Tizi n'Tichka (2 260 m) : photos et thé"],
@@ -349,23 +349,24 @@ details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; 
         ["16:30", "Hammam, piscine, repos"],
         ["18:30", "Coucher du soleil depuis la terrasse"]] },
 
-    { date: "2026-12-26", park: "Voiture à rendre à 16 h 00 à l'agence Routes, hôtel Adam Park (Agdal), après un plein. L'hôtel de la dernière nuit n'a plus besoin de parking.", south: true, geo: "d26", title: "Retour à Marrakech par le Tichka", where: "Marrakech, Hivernage", stay: "marrakech",
+    { date: "2026-12-26", park: "Voiture à rendre vers 18 h 00 à l'agence Routes, hôtel Adam Park (Agdal), après un plein. L'hôtel du 26 sert juste à déposer les bagages avant : un arrêt devant l'entrée suffit, pas besoin de parking.", south: true, geo: "d26", title: "Retour à Marrakech par le Tichka", where: "Marrakech, Hivernage", stay: "marrakech",
       drive: { from: "Skoura", to: "Marrakech", km: 238, min: 270, route: ["skoura", "ouarzazate", "tichka", "marrakech"] },
       high: "Dernière traversée de l'Atlas",
       sleep: ["Hôtel confortable dans l'Hivernage ou près de l'aéroport", "todo", "À réserver"],
       sched: [
         ["08:30", "Départ juste après le lever du soleil", "car"],
         ["09:15", "Ouarzazate : plein d'essence et café"],
-        ["09:35", "Route vers le col du Tichka (≈ 2 h)", "car"],
-        ["11:35", "Pause au col"],
-        ["11:50", "Descente vers Taddert", "car"],
-        ["12:20", "Déjeuner à Taddert, sans traîner"],
-        ["13:20", "Route vers Marrakech (≈ 1 h 30)", "car"],
-        ["14:50", "Plein près de l'Agdal"],
-        ["15:15", "Voiture rendue à l'agence Routes (limite 16 h 00)"],
-        ["15:45", "Taxi vers l'hôtel, fin d'après-midi libre", "car"],
+        ["09:45", "Route vers le col du Tichka (≈ 2 h)", "car"],
+        ["11:45", "Pause au col"],
+        ["12:15", "Descente vers Taddert", "car"],
+        ["12:45", "Déjeuner tranquille à Taddert"],
+        ["14:15", "Route vers Marrakech (≈ 1 h 30)", "car"],
+        ["15:45", "Hôtel dans l'Hivernage : enregistrement, dépôt des bagages"],
+        ["17:30", "Plein près de l'Agdal", "car"],
+        ["17:45", "Voiture rendue à l'agence Routes (vers 18 h 00)"],
+        ["18:00", "Retour à l'hôtel en taxi (≈ 5 min)", "car"],
         ["Soir", "Dernier dîner, valises bouclées, taxi réservé pour 5 h 15"]],
-      alerts: ["<b>Retour de la voiture à 16 h 00 :</b> environ 45 min de marge seulement. En cas de retard (Tichka, bouchons), appeler l'agence au +212 603 644 241. Mieux : demander dès maintenant de décaler le retour à 17 h ou 18 h.", "<b>Tichka :</b> vérifier l'état de la route avant de partir. Cette journée sert de marge avant le vol."] },
+      alerts: ["<b>Retour de la voiture :</b> visé vers 18 h 00, mais le contrat dit 16 h 00. Si l'agence a refusé de décaler au retrait, raccourcir le déjeuner et passer directement à l'agence en arrivant (vers 15 h 15). En cas de retard (Tichka, bouchons), appeler l'agence au +212 603 644 241.", "<b>Tichka :</b> vérifier l'état de la route avant de partir. Cette journée sert de marge avant le vol."] },
 
     { date: "2026-12-27", park: "Plus de voiture : taxi à réserver la veille par l'hôtel.", title: "Retour à Montréal", where: "Marrakech → Montréal",
       sched: [
