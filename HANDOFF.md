@@ -59,7 +59,7 @@ Le jour se lève vers 8 h 20 et se couche vers 18 h 30 (calcul pour ces lieux et
 | Montée vers Bou Tharar (vallée des Roses) le 24 | Écartée | ≈ +1 h 30, peut-être un bout de piste à la fin, et le souk de Skoura serait raté |
 | Aller-retour dans le Drâa (Agdz, Tamnougalt) le 25 | Écarté | ≈ 4 h de route le jour de Noël, paysages proches de ceux de Skoura |
 | 2 nuits à Aït-Ben-Haddou | Impossible | Il faudrait retirer une nuit à Boumalne ou à Skoura |
-| Voiture de location | **Réservée** (Expedia, 8 nov.) | Routes Car Rental, Dacia Duster ou équivalent, kilométrage illimité, ≈ 302 $ CA payés au retrait. Agence à l'hôtel Dam Park, Agdal. Retrait lun. 21 à 8 h 00, retour sam. 26 à 16 h 00 au même endroit. Assurance collision non incluse. Le 27, taxi vers l'aéroport. |
+| Voiture de location | **Réservée** (Expedia, 8 nov.) | Routes Car Rental, Dacia Duster ou équivalent, kilométrage illimité, ≈ 302 $ CA payés au retrait. Agence à l'hôtel Adam Park (écrit « Dam Park » sur la confirmation), Agdal. Retrait lun. 21 à 8 h 00, retour sam. 26 à 16 h 00 au même endroit. Assurance collision non incluse. Le 27, taxi vers l'aéroport. |
 | Notes Lonely Planet en PDF | Fait, hors du dépôt | Notes reformulées, gardées en local car le guide est protégé |
 
 ## 5. Questions encore ouvertes
