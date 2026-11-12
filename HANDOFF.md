@@ -40,8 +40,8 @@ Ce fichier résume tout le travail fait jusqu'ici, pour reprendre le projet dans
 | mer. 23 | Boumalne Dadès (nuit 2/2) | Aït Youl, randonnée guidée aux Doigts de singe, **déjeuner au café Timzzillite avec un ami** qui est en circuit 4×4 dans le Sud aux mêmes dates | ≈ 1 h 20 · 60 km aller-retour |
 | jeu. 24 | **Palmeraie de Skoura** (nuit 1/2) | Distillerie de rose à Kelâat M'Gouna, souk du jeudi à Skoura, lodge, **réveillon** | ≈ 1 h 30 · 73 km |
 | ven. 25 | Skoura (nuit 2/2) | Noël sans voiture : palmeraie à vélo avec un guide, kasbah d'Amridil, poterie Kabor, hammam | 0 |
-| sam. 26 | Marrakech (Hivernage) | Départ 8 h 30, plein à Ouarzazate, Tichka, déjeuner à Taddert, arrivée vers 15 h 30 | ≈ 4 h 30 · 238 km |
-| dim. 27 | – | Réveil 4 h 45, voiture rendue à l'aéroport vers 5 h 30 (à confirmer), vol à 7 h 50 | 15 min |
+| sam. 26 | Marrakech (Hivernage) | Départ 8 h 30, plein à Ouarzazate, Tichka, déjeuner court à Taddert, **voiture rendue à l'Agdal avant 16 h 00** | ≈ 4 h 30 · 238 km |
+| dim. 27 | – | Réveil 4 h 45, taxi vers l'aéroport à 5 h 15 (voiture déjà rendue le 26), vol à 7 h 50 | 15 min (taxi) |
 | **Total Sud** | | | **≈ 14 h 05 · 693 km** |
 
 Le jour se lève vers 8 h 20 et se couche vers 18 h 30 (calcul pour ces lieux et ces dates). Aucun trajet n'est prévu de nuit.
@@ -59,14 +59,15 @@ Le jour se lève vers 8 h 20 et se couche vers 18 h 30 (calcul pour ces lieux et
 | Montée vers Bou Tharar (vallée des Roses) le 24 | Écartée | ≈ +1 h 30, peut-être un bout de piste à la fin, et le souk de Skoura serait raté |
 | Aller-retour dans le Drâa (Agdz, Tamnougalt) le 25 | Écarté | ≈ 4 h de route le jour de Noël, paysages proches de ceux de Skoura |
 | 2 nuits à Aït-Ben-Haddou | Impossible | Il faudrait retirer une nuit à Boumalne ou à Skoura |
+| Voiture de location | **Réservée** (Expedia, 8 nov.) | Routes Car Rental, Dacia Duster ou équivalent, kilométrage illimité, ≈ 302 $ CA payés au retrait. Agence à l'hôtel Dam Park, Agdal. Retrait lun. 21 à 8 h 00, retour sam. 26 à 16 h 00 au même endroit. Assurance collision non incluse. Le 27, taxi vers l'aéroport. |
 | Notes Lonely Planet en PDF | Fait, hors du dépôt | Notes reformulées, gardées en local car le guide est protégé |
 
 ## 5. Questions encore ouvertes
 
 1. **Boumalne ou les gorges ?** Recommandation : dormir dans les gorges. Le 22 s'allonge d'environ 30 min, mais le 23 se fait sans voiture.
 2. **Budget du lodge de Skoura** pour les nuits du 24 et du 25, dîner du réveillon compris. Estimation : 200 à 350 € la nuit pour deux, à vérifier avec de vrais devis. Lodges cités par le guide : L'Ma Lodge, Les Jardins de Skoura, Auberge Chez Talout.
-3. **Agence de location** : un grand loueur à l'aéroport, réservé via un comparateur (Enterprise et Budget ont beaucoup d'avis), avec une assurance sans franchise. Points à vérifier : retour possible à 5 h 30 le 27, caution sur carte de crédit, permis international (CAA).
-4. **Réservations à faire** : Aït-Ben-Haddou (côté nouveau village, avec parking), maison d'hôtes au Dadès, lodge à Skoura (à réserver tôt, c'est Noël), hôtel dans l'Hivernage pour le 26, voiture de location.
+3. **Voiture : réservée** (voir section 4). Restent à faire : demander à Routes de décaler le retour du 26 à 17 h ou 18 h (marge de 45 min seulement), vérifier l'assurance collision de la carte de crédit au Maroc (non incluse dans la réservation), demander le montant de la caution, permis international (CAA).
+4. **Réservations à faire** : Aït-Ben-Haddou (côté nouveau village, avec parking), maison d'hôtes au Dadès, lodge à Skoura (à réserver tôt, c'est Noël), hôtel dans l'Hivernage pour le 26 (parking inutile), taxi pour l'aéroport le 27 à 5 h 15.
 5. Faut-il retirer les numéros de vol de la page publique ? Proposé, sans réponse pour l'instant.
 
 ## 6. Infos utiles déjà recherchées

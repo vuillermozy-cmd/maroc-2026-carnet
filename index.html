@@ -221,8 +221,8 @@ details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; 
     <h2 id="h-voiture">Conduire dans le Sud</h2>
     <div class="tbl"><table class="sched"><tbody>
       <tr><td class="t">Voiture</td><td>Dacia Duster 2 roues motrices ou équivalent. Pas besoin de 4×4 : toutes les routes du programme sont goudronnées, et un 4×4 ne passe pas un col fermé.</td></tr>
-      <tr><td class="t">Location</td><td>Grand loueur à l'aéroport, réservé via un comparateur, en lisant les avis récents de l'agence de Marrakech. Retrait le 21 au matin : taxi depuis la médina, ou livraison près de la Koutoubia. Retour le 27 vers 5 h 30, à confirmer avec l'agence (sinon le 26 au soir).</td></tr>
-      <tr><td class="t">À réserver</td><td>Assurance sans franchise, ou vérifier ce que couvre la carte de crédit. Caution de 500 à 1 500 € bloquée sur une carte de crédit (débit souvent refusé). Option plein rendu plein.</td></tr>
+      <tr><td class="t">Location</td><td><span class="chip ok">Réservé</span> Routes Car Rental, Dacia Duster ou équivalent, kilométrage illimité. Agence à l'hôtel Dam Park, zone touristique de l'Agdal (≈ 15 min de taxi depuis la médina). Retrait <b>lun. 21 à 8 h 00</b>, retour au même endroit <b>sam. 26 à 16 h 00</b>. Agence : +212 603 644 241.</td></tr>
+      <tr><td class="t">Au comptoir</td><td>Environ 302 $ CA (≈ 214 $ US) à payer au retrait, en dirhams. L'assurance collision n'est <b>pas incluse</b> : vérifier ce que couvre la carte de crédit au Maroc, sinon prendre l'option sans franchise sur place. Caution bloquée sur une carte de crédit au nom du conducteur (montant à demander). Ajouter Flore comme 2ᵉ conductrice si elle conduit (supplément). Politique de carburant à demander.</td></tr>
       <tr><td class="t">Papiers</td><td>Permis valide depuis au moins un an et permis international (CAA, environ 20 $). Passeport et contrat de location toujours dans la voiture.</td></tr>
       <tr><td class="t">Au départ</td><td>Filmer la voiture sous tous les angles et vérifier la roue de secours.</td></tr>
       <tr><td class="t">Tichka</td><td>Peut fermer quelques heures en cas de neige. Le matin des 21 et 26, demander à l'hébergement ou chercher « Tichka » dans les actualités (Hespress, H24info). S'il est fermé, attendre la réouverture.</td></tr>
@@ -238,7 +238,6 @@ details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; 
     <h2 id="h-decider">À décider</h2>
     <div class="decisions">
       <div class="decision"><b>Le Dadès</b><span>Dormir à Boumalne même, ou dans les gorges : la journée du 23 se fait alors sans voiture.</span></div>
-      <div class="decision"><b>Voiture</b><span>Agence de location : retrait le 21 au matin, rendu à l'aéroport le 27 vers 5 h 30 si l'agence l'accepte.</span></div>
       <div class="decision"><b>Réveillon</b><span>Lodge de charme à Skoura pour les nuits du 24 et du 25 : budget à fixer.</span></div>
     </div>
   </section>
@@ -279,12 +278,13 @@ details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; 
         ["dim. 20 · soir", "Préparer un petit sac pour le Sud : couches chaudes, bonnet, chaussures de marche"]],
       alerts: ["Prévenir le logement de l'arrivée à 06 h 20 pour entrer tôt.", "<b>Liquide :</b> retirer des dirhams avant le 21. Il n'y a pas de banque dans les gorges du Dadès et le réseau y est faible."] },
 
-    { date: "2026-12-21", park: "Retrait à l'agence (Guéliz ou aéroport) : la voiture n'entre pas dans la médina. À Aït-Ben-Haddou, choisir un hébergement côté nouveau village, avec parking. Le ksar se rejoint à pied par la passerelle.", south: true, geo: "d21", title: "Le Tichka, la vallée de l'Ounila et Aït-Ben-Haddou", where: "Aït-Ben-Haddou", stay: "abh",
+    { date: "2026-12-21", park: "Retrait à 8 h 00 à l'agence Routes, hôtel Dam Park (Agdal) : la voiture n'entre pas dans la médina. À Aït-Ben-Haddou, choisir un hébergement côté nouveau village, avec parking. Le ksar se rejoint à pied par la passerelle.", south: true, geo: "d21", title: "Le Tichka, la vallée de l'Ounila et Aït-Ben-Haddou", where: "Aït-Ben-Haddou", stay: "abh",
       drive: { from: "Marrakech", to: "Aït-Ben-Haddou", km: 175, min: 225, route: ["marrakech", "tichka", "telouet", "abh"] },
       high: "Col du Tichka, vallée de l'Ounila, ksar au coucher du soleil",
       sleep: ["Riad ou kasbah avec vue sur le ksar", "todo", "À réserver"],
       sched: [
-        ["08:30", "Retrait de la voiture de location à Marrakech"],
+        ["07:30", "Taxi de la médina vers l'Agdal, hôtel Dam Park (≈ 15 min)", "car"],
+        ["08:00", "Retrait de la voiture (Routes) : papiers, caution, assurance, vidéo du véhicule"],
         ["09:00", "Départ par la N9 vers le Haut Atlas", "car"],
         ["10:30", "Pause café à Taddert"],
         ["11:15", "Col du Tizi n'Tichka (2 260 m) : photos et thé"],
@@ -349,26 +349,29 @@ details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; 
         ["16:30", "Hammam, piscine, repos"],
         ["18:30", "Coucher du soleil depuis la terrasse"]] },
 
-    { date: "2026-12-26", park: "Choisir un hôtel avec parking dans l'Hivernage. Faire le plein avant de rendre la voiture.", south: true, geo: "d26", title: "Retour à Marrakech par le Tichka", where: "Marrakech, Hivernage", stay: "marrakech",
+    { date: "2026-12-26", park: "Voiture à rendre à 16 h 00 à l'agence Routes, hôtel Dam Park (Agdal), après un plein. L'hôtel de la dernière nuit n'a plus besoin de parking.", south: true, geo: "d26", title: "Retour à Marrakech par le Tichka", where: "Marrakech, Hivernage", stay: "marrakech",
       drive: { from: "Skoura", to: "Marrakech", km: 238, min: 270, route: ["skoura", "ouarzazate", "tichka", "marrakech"] },
       high: "Dernière traversée de l'Atlas",
       sleep: ["Hôtel confortable dans l'Hivernage ou près de l'aéroport", "todo", "À réserver"],
       sched: [
         ["08:30", "Départ juste après le lever du soleil", "car"],
         ["09:15", "Ouarzazate : plein d'essence et café"],
-        ["09:45", "Route vers le col du Tichka (≈ 2 h)", "car"],
-        ["11:45", "Pause au col"],
-        ["12:45", "Déjeuner à Taddert"],
-        ["14:00", "Route vers Marrakech (≈ 1 h 30)", "car"],
-        ["15:30", "Arrivée à l'hôtel, après-midi libre"],
-        ["Soir", "Dernier dîner, valises bouclées, plein de la voiture"]],
-      alerts: ["<b>Tichka :</b> vérifier l'état de la route avant de partir. Cette journée sert de marge avant le vol."] },
+        ["09:35", "Route vers le col du Tichka (≈ 2 h)", "car"],
+        ["11:35", "Pause au col"],
+        ["11:50", "Descente vers Taddert", "car"],
+        ["12:20", "Déjeuner à Taddert, sans traîner"],
+        ["13:20", "Route vers Marrakech (≈ 1 h 30)", "car"],
+        ["14:50", "Plein près de l'Agdal"],
+        ["15:15", "Voiture rendue à l'agence Routes (limite 16 h 00)"],
+        ["15:45", "Taxi vers l'hôtel, fin d'après-midi libre", "car"],
+        ["Soir", "Dernier dîner, valises bouclées, taxi réservé pour 5 h 15"]],
+      alerts: ["<b>Retour de la voiture à 16 h 00 :</b> environ 45 min de marge seulement. En cas de retard (Tichka, bouchons), appeler l'agence au +212 603 644 241. Mieux : demander dès maintenant de décaler le retour à 17 h ou 18 h.", "<b>Tichka :</b> vérifier l'état de la route avant de partir. Cette journée sert de marge avant le vol."] },
 
-    { date: "2026-12-27", park: "Vérifier que l'agence accepte un retour à 5 h 30 (dépose des clés). Sinon, rendre la voiture le 26 au soir et prendre un taxi.", title: "Retour à Montréal", where: "Marrakech → Montréal",
+    { date: "2026-12-27", park: "Plus de voiture : taxi à réserver la veille par l'hôtel.", title: "Retour à Montréal", where: "Marrakech → Montréal",
       sched: [
         ["04:45", "Réveil"],
-        ["05:15", "Départ vers l'aéroport (≈ 15 min)", "car"],
-        ["05:30", "Rendu de la voiture (à confirmer avec l'agence), enregistrement"],
+        ["05:15", "Taxi vers l'aéroport (≈ 15 min), réservé par l'hôtel", "car"],
+        ["05:30", "Enregistrement"],
         ["07:50", "Vol Air Transat TS 397, arrivée à Montréal à 11 h 00"]] }
   ];
 
@@ -444,7 +447,7 @@ details.note .saved { font-size: 0.75rem; color: var(--muted); margin-top: 4px; 
         <td>${esc(d.high)}${dr ? `<small>${esc(dr.from)} → ${esc(dr.to)}, ${dr.km} km</small>` : ""}</td>
         <td class="r vol num">${dr ? "≈ " + fmtMin(dr.min) : "0"}</td></tr>`);
     });
-    rows.push(`<tr><td class="d">dim. 27</td><td>Vol de retour<small>07 h 50 → Montréal 11 h 00</small></td><td>Voiture rendue à l'aéroport</td><td class="r vol">15 min</td></tr>`);
+    rows.push(`<tr><td class="d">dim. 27</td><td>Vol de retour<small>07 h 50 → Montréal 11 h 00</small></td><td>Taxi vers l'aéroport</td><td class="r vol">15 min</td></tr>`);
     $("#prog").innerHTML = `<thead><tr><th>Jour</th><th>Nuit</th><th>Au programme</th><th class="r">Volant</th></tr></thead>
       <tbody>${rows.join("")}</tbody>
       <tfoot><tr><td colspan="3">Total dans le Sud, ${totalKm} km</td><td class="r num">≈ ${fmtMin(totalMin)}</td></tr></tfoot>`;
