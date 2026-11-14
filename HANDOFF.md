@@ -36,13 +36,13 @@ Ce fichier résume tout le travail fait jusqu'ici, pour reprendre le projet dans
 |---|---|---|---|
 | 16 → 20 | Avion, puis Marrakech | Vol de nuit, puis les 30 ans de Yasmine | – |
 | lun. 21 | **Aït-Ben-Haddou** (1 nuit) | Retrait de la voiture 8 h 30, col du Tichka, **Télouet et la vallée de l'Ounila**, ksar au coucher du soleil | ≈ 3 h 45 · 175 km |
-| mar. 22 | **Boumalne Dadès** (nuit 1/2) | Kasbah de Taourirt et déjeuner à Ouarzazate, arrivée vers 15 h 30, palmeraie | ≈ 3 h · 147 km |
-| mer. 23 | Boumalne Dadès (nuit 2/2) | Aït Youl, randonnée guidée aux Doigts de singe, **déjeuner au café Timzzillite avec un ami** qui est en circuit 4×4 dans le Sud aux mêmes dates | ≈ 1 h 20 · 60 km aller-retour |
-| jeu. 24 | **Palmeraie de Skoura** (nuit 1/2) | Distillerie de rose à Kelâat M'Gouna, souk du jeudi à Skoura, lodge, **réveillon** | ≈ 1 h 30 · 73 km |
+| mar. 22 | **Gorges du Dadès, Tamellalt** (nuit 1/2) : Gorges View Dades, réservé | Kasbah de Taourirt et déjeuner à Ouarzazate, distributeur à Boumalne, arrivée vers 16 h 30 | ≈ 3 h 25 · 164 km |
+| mer. 23 | Tamellalt (nuit 2/2) | Randonnée guidée aux Doigts de singe depuis Tamellalt, **déjeuner au café Timzzillite avec un ami** qui est en circuit 4×4 dans le Sud aux mêmes dates | ≈ 40 min · 22 km aller-retour |
+| jeu. 24 | **Palmeraie de Skoura** (nuit 1/2) : Eco-Ferme Tamalait, réservé | Distillerie de rose à Kelâat M'Gouna, souk du jeudi à Skoura, **réveillon** | ≈ 1 h 55 · 90 km |
 | ven. 25 | Skoura (nuit 2/2) | Noël sans voiture : palmeraie à vélo avec un guide, kasbah d'Amridil, poterie Kabor, hammam | 0 |
 | sam. 26 | Marrakech (Hivernage) | Départ 8 h 30, plein à Ouarzazate, Tichka, déjeuner court à Taddert, dépôt des bagages à l'hôtel, **voiture rendue à l'Agdal vers 18 h 00** | ≈ 4 h 30 · 238 km |
 | dim. 27 | – | Réveil 4 h 45, taxi vers l'aéroport à 5 h 15 (voiture déjà rendue le 26), vol à 7 h 50 | 15 min (taxi) |
-| **Total Sud** | | | **≈ 14 h 05 · 693 km** |
+| **Total Sud** | | | **≈ 14 h 15 · 689 km** |
 
 Le jour se lève vers 8 h 20 et se couche vers 18 h 30 (calcul pour ces lieux et ces dates). Aucun trajet n'est prévu de nuit.
 
@@ -60,14 +60,15 @@ Le jour se lève vers 8 h 20 et se couche vers 18 h 30 (calcul pour ces lieux et
 | Aller-retour dans le Drâa (Agdz, Tamnougalt) le 25 | Écarté | ≈ 4 h de route le jour de Noël, paysages proches de ceux de Skoura |
 | 2 nuits à Aït-Ben-Haddou | Impossible | Il faudrait retirer une nuit à Boumalne ou à Skoura |
 | Voiture de location | **Réservée** (Expedia, 8 nov.) | Routes Car Rental, Dacia Duster ou équivalent, kilométrage illimité, ≈ 302 $ CA payés au retrait. Agence à l'hôtel Adam Park (écrit « Dam Park » sur la confirmation), Agdal. Retrait lun. 21 à 8 h 00, retour sam. 26 à 16 h 00 au même endroit sur le contrat, visé vers 18 h 00 (à négocier au retrait). Assurance collision non incluse. Le 27, taxi vers l'aéroport. |
+| Dormir à Boumalne | Écarté | Gorges View Dades réservé à Tamellalt, dans les gorges |
 | Notes Lonely Planet en PDF | Fait, hors du dépôt | Notes reformulées, gardées en local car le guide est protégé |
 
 ## 5. Questions encore ouvertes
 
-1. **Boumalne ou les gorges ?** Recommandation : dormir dans les gorges. Le 22 s'allonge d'environ 30 min, mais le 23 se fait sans voiture.
-2. **Budget du lodge de Skoura** pour les nuits du 24 et du 25, dîner du réveillon compris. Estimation : 200 à 350 € la nuit pour deux, à vérifier avec de vrais devis. Lodges cités par le guide : L'Ma Lodge, Les Jardins de Skoura, Auberge Chez Talout.
+1. **Dadès : réglé.** Gorges View Dades à Tamellalt (km 17 de la R704), 2 nuits, petit-déjeuner inclus, environ 68 € au total, annulation gratuite jusqu'au 20 déc. À demander : chauffage dans la chambre, lit double pour 2 adultes (chambre intitulée « 1 adulte + 1 enfant »), parking, dîner.
+2. **Skoura : réglé.** Eco-Ferme Tamalait à Oulad Amira, 2 nuits, petit-déjeuner inclus, environ 133 € payés, non remboursable. Bien moins cher que le budget prévu (200 à 350 € la nuit), mais ce n'est pas la nuit « waouh » envisagée. À demander : dîner du réveillon le 24, chauffage, plan d'accès, parking.
 3. **Voiture : réservée** (voir section 4). Restent à faire : faire accepter au retrait le 21 un retour vers 18 h 00 le 26 (16 h 00 sur le contrat ; décision : s'arranger sur place), vérifier l'assurance collision de la carte de crédit au Maroc (non incluse dans la réservation), demander le montant de la caution, permis international (CAA).
-4. **Réservations à faire** : Aït-Ben-Haddou (côté nouveau village, avec parking), maison d'hôtes au Dadès, lodge à Skoura (à réserver tôt, c'est Noël), hôtel dans l'Hivernage pour le 26 (parking inutile), taxi pour l'aéroport le 27 à 5 h 15.
+4. **Réservations à faire** : Aït-Ben-Haddou le 21 (côté nouveau village, avec parking), hôtel dans l'Hivernage pour le 26 (parking inutile), taxi pour l'aéroport le 27 à 5 h 15, dîner du réveillon à l'Eco-Ferme.
 5. Faut-il retirer les numéros de vol de la page publique ? Proposé, sans réponse pour l'instant.
 
 ## 6. Infos utiles déjà recherchées
@@ -87,7 +88,7 @@ Le jour se lève vers 8 h 20 et se couche vers 18 h 30 (calcul pour ces lieux et
 **Fichier unique** : `index.html`, sans build ni dépendance. Seules les polices Google Fonts (Bricolage Grotesque et Atkinson Hyperlegible) sont chargées de l'extérieur. L'icône est un drapeau marocain en SVG intégré.
 
 **Structure du script** (en bas de `index.html`) :
-- `P` : les lieux (`n` nom, `lat`/`lon`, `q` pour la recherche Google Maps, `lbl` = [dx, dy, ancrage] pour placer l'étiquette sur la carte, `minor` = sous-titre).
+- `P` : les lieux (dont `tamellalt`, position approximative au km 17 de la R704) (`n` nom, `lat`/`lon`, `q` pour la recherche Google Maps, `lbl` = [dx, dy, ancrage] pour placer l'étiquette sur la carte, `minor` = sous-titre).
 - `GEO` : les vrais tracés routiers par jour (`d21`, `d22`, `d23`, `d24`, `d26`), en tableaux de `[lon, lat]`. Ils viennent du routeur public OSRM (router.project-osrm.org), qui utilise les données OpenStreetMap, et sont simplifiés avec l'algorithme de Ramer-Douglas-Peucker (tolérance 0,0007°). Pour `d23`, l'aller-retour est réduit au seul aller. Pour recalculer : `tools/routes.py`.
 - `DAYS` : un objet par jour, avec les champs `date` (et `dateEnd` pour la période du 16 au 20 regroupée), `title`, `where`, `stay` (clé de `P`), `south`, `wow` (réveillon), `geo`, `drive` {`from`, `to`, `km`, `min`, `route`: clés de `P` pour le lien Google Maps}, `high` (temps forts dans le tableau du programme), `sleep` [texte, statut `ok`/`todo`, libellé], `park` (voiture et parking), `sched` [[heure, texte, "car" pour un créneau en voiture]], `alerts` (HTML autorisé).
 - Les totaux de km et de temps sont calculés à partir de `DAYS[].drive`.
