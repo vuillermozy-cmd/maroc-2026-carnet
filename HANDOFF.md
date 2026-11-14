@@ -35,7 +35,7 @@ Ce fichier résume tout le travail fait jusqu'ici, pour reprendre le projet dans
 | Jour | Nuit | Programme | Volant |
 |---|---|---|---|
 | 16 → 20 | Avion, puis Marrakech | Vol de nuit, puis les 30 ans de Yasmine | – |
-| lun. 21 | **Aït-Ben-Haddou** (1 nuit) | Retrait de la voiture 8 h 30, col du Tichka, **Télouet et la vallée de l'Ounila**, ksar au coucher du soleil | ≈ 3 h 45 · 175 km |
+| lun. 21 | **Aït-Ben-Haddou** (1 nuit) : Auberge Ayouze, réservé | Retrait de la voiture 8 h 30, col du Tichka, **Télouet et la vallée de l'Ounila**, ksar au coucher du soleil | ≈ 3 h 45 · 175 km |
 | mar. 22 | **Gorges du Dadès, Tamellalt** (nuit 1/2) : Gorges View Dades, réservé | Kasbah de Taourirt et déjeuner à Ouarzazate, distributeur à Boumalne, arrivée vers 16 h 30 | ≈ 3 h 25 · 164 km |
 | mer. 23 | Tamellalt (nuit 2/2) | Randonnée guidée aux Doigts de singe depuis Tamellalt, **déjeuner au café Timzzillite avec un ami** qui est en circuit 4×4 dans le Sud aux mêmes dates | ≈ 40 min · 22 km aller-retour |
 | jeu. 24 | **Palmeraie de Skoura** (nuit 1/2) : Eco-Ferme Tamalait, réservé | Distillerie de rose à Kelâat M'Gouna, souk du jeudi à Skoura, **réveillon** | ≈ 1 h 55 · 90 km |
@@ -68,8 +68,9 @@ Le jour se lève vers 8 h 20 et se couche vers 18 h 30 (calcul pour ces lieux et
 1. **Dadès : réglé.** Gorges View Dades à Tamellalt (km 17 de la R704), 2 nuits, petit-déjeuner inclus, environ 68 € au total, annulation gratuite jusqu'au 20 déc. À demander : chauffage dans la chambre, lit double pour 2 adultes (chambre intitulée « 1 adulte + 1 enfant »), parking, dîner.
 2. **Skoura : réglé.** Eco-Ferme Tamalait à Oulad Amira, 2 nuits, petit-déjeuner inclus, environ 133 € payés, non remboursable. Bien moins cher que le budget prévu (200 à 350 € la nuit), mais ce n'est pas la nuit « waouh » envisagée. À demander : dîner du réveillon le 24, chauffage, plan d'accès, parking.
 3. **Voiture : réservée** (voir section 4). Restent à faire : faire accepter au retrait le 21 un retour vers 18 h 00 le 26 (16 h 00 sur le contrat ; décision : s'arranger sur place), vérifier l'assurance collision de la carte de crédit au Maroc (non incluse dans la réservation), demander le montant de la caution, permis international (CAA).
-4. **Réservations à faire** : Aït-Ben-Haddou le 21 (côté nouveau village, avec parking), hôtel dans l'Hivernage pour le 26 (parking inutile), taxi pour l'aéroport le 27 à 5 h 15, dîner du réveillon à l'Eco-Ferme.
-5. Faut-il retirer les numéros de vol de la page publique ? Proposé, sans réponse pour l'instant.
+4. **Aït-Ben-Haddou : réglé.** Auberge Ayouze, douar Asfalou, chambre double avec terrasse, petit-déjeuner inclus, environ 63 €, annulation gratuite jusqu'au 6 déc. À faire : prévenir de l'heure d'arrivée ; demander parking, distance jusqu'au ksar, dîner.
+5. **Réservations à faire** : hôtel dans l'Hivernage pour le 26 (parking inutile), taxi pour l'aéroport le 27 à 5 h 15, dîner du réveillon à l'Eco-Ferme.
+6. Faut-il retirer les numéros de vol de la page publique ? Proposé, sans réponse pour l'instant.
 
 ## 6. Infos utiles déjà recherchées
 
